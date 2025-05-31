@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EventCard from '@/components/EventCard';
 import CallToActionCard from '@/components/CallToActionCard';
 import { Button } from '@/components/ui/button';
-import { CalendarCheck, Leaf, Lightbulb, Gamepad2, ArrowRight } from 'lucide-react';
+import { CalendarCheck, Leaf, Lightbulb, Gamepad2, ArrowRight, Zap, Recycle } from 'lucide-react';
 
 export default function HomePage() {
   return (
@@ -22,7 +22,7 @@ export default function HomePage() {
             Un espacio para conectar, aprender y actuar por un futuro más sostenible. Descubre el cronograma, participa en charlas, accede a recursos y diviértete con nuestros juegos interactivos.
           </p>
           <p className="text-md sm:text-lg font-semibold mb-10 text-background/80">
-            Fechas Clave: 15 - 22 de Septiembre, 2024
+            Fechas Clave: 6 - 10 de Junio
           </p>
           <Button asChild size="lg" className="bg-background text-primary hover:bg-background/90 group">
             <Link href="/schedule">
@@ -55,25 +55,28 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EventCard
-              title="Charla Inaugural: Nuestro Planeta, Nuestro Futuro"
-              description="Expertos discuten los desafíos ambientales actuales y cómo podemos contribuir a un futuro sostenible."
-              imageUrl="https://placehold.co/600x400.png"
-              imageHint="lecture environment"
-              linkUrl="/schedule#charla-inaugural"
+              title="Charla: Sin Contaminación por Plásticos"
+              description="Únete el 5 de junio a la discusión sobre microplásticos, cambio climático y soluciones innovadoras."
+              imageUrl="/img/img_landing/charla_microplasticos.png"
+              imageHint="environment lecture plastics"
+              linkUrl="/schedule"
+              linkText="Ver Detalles"
             />
             <EventCard
-              title="Taller de Reciclaje Creativo"
-              description="Aprende a transformar residuos en objetos útiles y artísticos. ¡Manos a la obra por el ambiente!"
-              imageUrl="https://placehold.co/600x400.png"
-              imageHint="recycling workshop"
-              linkUrl="/schedule#taller-reciclaje"
+              title="Juego: Guardianes del Planeta U"
+              description="¡Acepta el desafío! Toma decisiones como estudiante y descubre su impacto ambiental. Aprende jugando."
+              imageUrl="/img/img_landing/guardianesplanetaU.png"
+              imageHint="eco game student controller"
+              linkUrl="/game"
+              linkText="¡Jugar Ahora!"
             />
             <EventCard
-              title="Feria de Proyectos Sostenibles"
-              description="Descubre iniciativas innovadoras de estudiantes y docentes para un campus más verde."
-              imageUrl="https://placehold.co/600x400.png"
-              imageHint="sustainability fair"
-              linkUrl="/schedule#feria-proyectos"
+              title="Charla: Residuos en Sodas UCR"
+              description="Explora el 9 de junio el manejo de residuos en las sodas de Sociales e Ingenierías y promueve el consumo responsable."
+              imageUrl="/img/img_landing/residuosensodas.png"
+              imageHint="university discussion waste management"
+              linkUrl="/schedule"
+              linkText="Más Información"
             />
           </div>
         </div>
@@ -104,8 +107,8 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <CallToActionCard
-              title="Cronograma Interactivo"
-              description="No te pierdas ningún evento. Filtra por día, tipo y ubicación."
+              title="Cronograma Completo"
+              description="No te pierdas ningún evento. Revisa los detalles de nuestras charlas."
               linkUrl="/schedule"
               linkText="Ver Cronograma"
               icon={CalendarCheck}
@@ -113,18 +116,18 @@ export default function HomePage() {
             />
             <CallToActionCard
               title="Consejos AI Diarios"
-              description="Recibe tips ambientales personalizados generados por IA."
+              description="Recibe tips ambientales personalizados generados por IA para tu día a día."
               linkUrl="/tips"
               linkText="Obtener un Consejo"
               icon={Leaf}
               className="bg-card"
             />
             <CallToActionCard
-              title="Juego Ecológico"
-              description="Diviértete y aprende sobre sostenibilidad con nuestro juego interactivo."
-              linkUrl="/game"
-              linkText="Jugar Ahora"
-              icon={Gamepad2}
+              title="Datos Curiosos"
+              description="Amplía tus conocimientos sobre el medio ambiente con hechos sorprendentes."
+              linkUrl="/facts"
+              linkText="Descubrir Datos"
+              icon={Lightbulb} 
               className="bg-card"
             />
           </div>
