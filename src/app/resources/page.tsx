@@ -7,34 +7,47 @@ interface ResourceItem {
   description: string;
   fileType: 'PDF' | 'PNG' | 'JPG';
   icon: React.ElementType;
-  downloadLink: string; // Placeholder, actual files would be hosted
+  downloadLink: string;
   imageHint: string;
+  imageUrl: string;
 }
 
 const resources: ResourceItem[] = [
   {
-    title: "Flyer Oficial Semana Ambiental",
-    description: "Flyer promocional del evento con información general y cronograma resumido.",
-    fileType: "PDF",
-    icon: FileText,
-    downloadLink: "#", // Replace with actual link
-    imageHint: "event flyer"
-  },
-  {
-    title: "Póster: 5 Acciones por el Planeta",
-    description: "Póster infográfico con 5 acciones clave para cuidar el medio ambiente.",
+    title: "Día Mundial del Medio Ambiente - TCU",
+    description: "Imagen alusiva al Día Mundial del Medio Ambiente, utilizada en el TCU.",
     fileType: "PNG",
     icon: ImageIcon,
-    downloadLink: "#", // Replace with actual link
-    imageHint: "infographic poster environment"
+    downloadLink: "/resources/Día Mundial del Medio Ambiente - TCU.png",
+    imageHint: "Día Mundial del Medio Ambiente TCU imagen",
+    imageUrl: "/img/img_resources/diadelambiente.png"
   },
   {
-    title: "Guía de Reciclaje UCR",
-    description: "Guía detallada sobre cómo reciclar correctamente en el campus universitario.",
+    title: "Buenas Prácticas Ambientales en la Facultad",
+    description: "Documento PDF con recomendaciones de buenas prácticas ambientales en la facultad.",
     fileType: "PDF",
     icon: FileText,
-    downloadLink: "#", // Replace with actual link
-    imageHint: "recycling guide"
+    downloadLink: "/resources/Buenas Prácticas Ambientales en la Facultad.pdf",
+    imageHint: "Buenas prácticas ambientales facultad",
+    imageUrl: "/img/img_resources/facultad.png"
+  },
+  {
+    title: "Buenas Prácticas Ambientales en la Universidad",
+    description: "Documento PDF con recomendaciones de buenas prácticas ambientales en la universidad.",
+    fileType: "PDF",
+    icon: FileText,
+    downloadLink: "/resources/Buenas Prácticas Ambientales en la Universidad de Costa Rica.pdf",
+    imageHint: "Buenas prácticas ambientales universidad",
+    imageUrl: "/img/img_resources/universidad.png"
+  },
+  {
+    title: "Ambiente en Costa Rica",
+    description: "Documento PDF sobre el estado y retos del ambiente en Costa Rica.",
+    fileType: "PDF",
+    icon: FileText,
+    downloadLink: "/resources/Ambiente en Costa Rica.pdf",
+    imageHint: "Ambiente Costa Rica PDF",
+    imageUrl: "/img/img_resources/costarica.png"
   },
 ];
 
@@ -59,7 +72,7 @@ export default function ResourcesPage() {
               </div>
                <div className="mt-4 h-48 w-full relative overflow-hidden rounded-md bg-muted">
                 <img 
-                  src={`https://placehold.co/400x300.png?text=${encodeURIComponent(resource.fileType)}`} 
+                  src={resource.imageUrl}
                   alt={`${resource.title} preview`}
                   data-ai-hint={resource.imageHint}
                   className="absolute inset-0 w-full h-full object-contain p-2"
